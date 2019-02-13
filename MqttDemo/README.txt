@@ -10,6 +10,6 @@
 
 3. 使用样例见 logic/mainLogic.cc
 
-4. 链接（链接libcrypto.so和libssl.so），修改Makefile 
+4. 链接（链接libcrypto.so和libssl.so，openssl头文件在jni/include/目录下），修改Makefile 
 	添加：-DOPENSSL -lssl -lcrypto
 	LOCAL_CPPFLAGS := -fexceptions -fpermissive -Wall -O2 -luClibc++ -leasyui -llog -DOPENSSL -lssl -lcrypto
