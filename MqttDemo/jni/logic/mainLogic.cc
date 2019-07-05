@@ -68,6 +68,7 @@ protected:
 		// 连接
 		if ((rc = MQTTClient_connect(client, &conn_opts)) != MQTTCLIENT_SUCCESS) {
 			LOGD("Failed to connect, return code %d\n", rc);
+			MQTTClient_destroy(&client);
 			return false;
 		}
 
@@ -165,6 +166,7 @@ protected:
 
 		if ((rc = MQTTClient_connect(client, &conn_opts)) != MQTTCLIENT_SUCCESS) {
 			LOGD("Failed to connect, return code %d\n", rc);
+			MQTTClient_destroy(&client);
 			return false;
 		}
 
